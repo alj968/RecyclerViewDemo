@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
 
         List<Course> courses = new ArrayList<>();
-        courses.add(new Course("Mobile Apps", "Jones"));
-        courses.add(new Course("Apple Scripts", "Kusma"));
-        courses.add(new Course("Crazy-Good UI Design", "DeSeta"));
-        courses.add(new Course("Mastering Chess", "Iyengar"));
-        courses.add(new Course("Advanced LandCandy", "Traweek"));
-        courses.add(new Course("Soccer 101", "Neary"));
+        courses.add(new Course("Mobile Apps", "Jones",R.drawable.ic_android_black_24dp));
+        courses.add(new Course("Apple Scripts", "Kusma",R.drawable.ic_phone_iphone_black_24dp));
+        courses.add(new Course("Crazy-Good UI Design", "DeSeta",R.drawable.ic_palette_black_24dp));
+        courses.add(new Course("Mastering Chess", "Iyengar", R.drawable.ic_grid_on_black_24dp));
+        courses.add(new Course("Advanced LandCandy", "Traweek",R.drawable.ic_school_black_24dp));
+        courses.add(new Course("Soccer 101", "Neary",R.drawable.ic_tag_faces_black_24dp));
         mAdapter = new CourseAdapter(courses);
         mRecyclerView.setAdapter(mAdapter);
     }

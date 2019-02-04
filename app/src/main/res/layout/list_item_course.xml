@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
     <ImageView
         android:id="@+id/imageViewCourseImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_tag_faces_black_24dp"
-    />
+        android:src="@drawable/ic_tag_faces_black_24dp" />
+
     <TextView
         android:id="@+id/textViewCourseTitle"
         android:layout_width="wrap_content"
@@ -18,13 +19,22 @@
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@id/imageViewCourseImage"
         android:text="Pretend Course Title"
-    />
-    <TextView android:id="@+id/textViewCourseInstructor"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_below="@id/textViewCourseTitle"
-              android:layout_marginLeft="16dp"
-              android:layout_toRightOf="@id/imageViewCourseImage"
-              android:text="Pretend Course Instructor"
-    />
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textViewCourseInstructor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCourseTitle"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/imageViewCourseImage"
+        android:text="Pretend Course Instructor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewCourseInstructor"
+        android:background="#000000" />
 </RelativeLayout>
