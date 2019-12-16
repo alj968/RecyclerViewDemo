@@ -5,14 +5,10 @@ package com.alj968.android.recyclerviewdemo;
  */
 
 public class Course {
+
     private String mCourseTitle;
     private String mCourseInstructor;
     private int mCourseImageResourceId;
-
-    public Course(String courseTitle, String courseInstructor) {
-        mCourseTitle = courseTitle;
-        mCourseInstructor = courseInstructor;
-    }
 
     public Course(String courseTitle, String courseInstructor, int courseImageResourceId) {
         mCourseTitle = courseTitle;
@@ -43,4 +39,6 @@ public class Course {
     public void setCourseImageResourceId(int courseImageResourceId) {
         mCourseImageResourceId = courseImageResourceId;
     }
+
 }
+

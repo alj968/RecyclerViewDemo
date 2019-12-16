@@ -1,5 +1,6 @@
 package com.alj968.android.recyclerviewdemo;
 
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;

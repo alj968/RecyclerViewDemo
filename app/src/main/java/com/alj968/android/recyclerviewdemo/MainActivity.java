@@ -1,9 +1,6 @@
 package com.alj968.android.recyclerviewdemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,20 +11,24 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class MainActivity extends AppCompatActivity {
-    private CourseAdapter mAdapter;
     private RecyclerView mRecyclerView;
+    private CourseAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        List<Course> courses = new ArrayList<>();
+        ArrayList<Course> courses = new ArrayList<>();
         courses.add(new Course("Mobile Apps", "Jones",R.drawable.ic_android_black_24dp));
         courses.add(new Course("Apple Scripts", "Kusma",R.drawable.ic_phone_iphone_black_24dp));
         courses.add(new Course("Crazy-Good UI Design", "DeSeta",R.drawable.ic_palette_black_24dp));
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         public CourseHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
             View view = layoutInflater
-                    .inflate(R.layout.list_item_course, parent, false);
+                    .inflate(R.layout.listitem_layout, parent, false);
             return new CourseHolder(view);
         }
 
